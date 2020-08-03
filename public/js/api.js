@@ -6,9 +6,12 @@ const API = {
     } catch (err) {
       console.log(err);
     }
-    if (res.length > 0)
+
+    const json = await res.json();
+    console.log(json);
+    
+    if (json.length > 0)
     {
-      const json = await res.json();
       const last = json[json.length - 1];
   
       // Add on the totalDuration
