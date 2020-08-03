@@ -7,8 +7,14 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
 
-  addWorkout: (req, res) => {
-    db.Workout.create({ _id: req.params.id, ...req.body })
+  createWorkout: (req, res) => {
+    db.Workout.create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
+  addExercise: (req, res) => {
+    db.Workout.updateOne({ _id: req.params.id }, { $push: { exercises: req.body } })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
