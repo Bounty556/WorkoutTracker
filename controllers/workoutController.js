@@ -8,7 +8,7 @@ module.exports = {
   },
 
   getWorkoutsInRange: (req, res) => {
-    db.Workout.find({}).sort({ day: -1 }).limit(7)
+    db.Workout.find({}).sort({ day: -1 }).limit(7) // Sort in descending order, then grab the first 7
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
