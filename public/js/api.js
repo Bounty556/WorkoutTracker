@@ -2,25 +2,34 @@ const API = {
   async getLastWorkout() {
     let res;
     try {
-      res = await fetch("/api/workouts");
+      res = await fetch('/api/workouts');
     } catch (err) {
       console.log(err);
     }
-    const json = await res.json();
-    const last = json[json.length - 1];
-
-    // Add on the totalDuration
-    last.totalDuration = last.exercises.reduce((total, el) => total + el.duration, 0);
-
-    return last;
+    if (res.length > 0)
+    {
+      const json = await res.json();
+      const last = json[json.length - 1];
+  
+      // Add on the totalDuration
+      last.totalDuration = last.exercises.reduce((total, el) => total + el.duration, 0);
+  
+      return last;
+    }
+    return null;
   },
 
   async addExercise(data) {
-    const id = location.search.split("=")[1];
+    let id = location.search.split('=')[1];
 
-    const res = await fetch("/api/workouts/" + id, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
+    if (id === 'undefined')
+    {
+      id = await this.getLastWorkout()._id;
+    }
+
+    const res = await fetch('/api/workouts/' + id, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     });
 
@@ -30,10 +39,10 @@ const API = {
   },
 
   async createWorkout(data = {}) {
-    const res = await fetch("/api/workouts", {
-      method: "POST",
+    const res = await fetch('/api/workouts', {
+      method: 'POST',
       body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json" }
+      headers: { 'Content-Type': 'application/json' }
     });
 
     const json = await res.json();
