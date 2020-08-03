@@ -1,10 +1,12 @@
 const workoutController = require('../../controllers/workoutController');
 const router = require('express').Router();
 
-router.route('/workouts')
+router.route('/')
   .get(workoutController.getAllWorkouts)
   .post(workoutController.createWorkout);
 
-router.put('/workouts/:id', workoutController.addExercise);
+router.get('/range', workoutController.getWorkoutsInRange);
+
+router.put('/:id', workoutController.addExercise);
 
 module.exports = router;
