@@ -1,51 +1,42 @@
-# Unit 17 Nosql Homework: Workout Tracker
+![Language](https://img.shields.io/badge/language-javascript-blue) ![LastCommit](https://img.shields.io/github/last-commit/Bounty556/WorkoutTracker?style=flat-square) ![CommitActivity](https://img.shields.io/github/commit-activity/m/Bounty556/WorkoutTracker)
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+# Workout Tracker
 
-## User Story
+## Description
+A simple web app for keeping track of daily workouts, subdivided into individual exercises. You can view workout stats on the stats page, and see your latest workout on the home page.
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+## Table of Contents
+- [Usage](#usage)
+- [License](#license)
+- [Questions](#questions)
 
-## Business Context
+## Usage
+To use the Workout Tracker, go to ---.herokuapp.com. Here, you can create new workouts by clicking the 'New Workout' button. This will create a new workout and automatically bring you to the exercise addition page. Here, you can add new exercises to your current workout by choosing whether it is a resistance or cardio exercise. From there, you can fill out the appropriate details of the exercise and click either 'Complete' to add it to the workout, or 'Add Exercise' to add another exercise as well.
 
-A consumer will reach their fitness goals quicker when they track their workout progress.
+Finally, you can click on 'Fitness Tracker Dashboard' in the top left of the webpage to be taken to your workout statistics for the past week.
 
-## Acceptance Criteria
+## License
+MIT License
 
-When the user loads the page, they should be given the option to create a new workout, or continue with their last workout.
+Copyright (c) 2020 Jacob Peterson
 
-The user should be able to:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-  * Add exercises to a previous workout plan.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-  * Add new exercises to a new workout plan.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-  * View the combined weight of multiple exercises on the `stats` page.
-
-## Commit Early and Often
-
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
-
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
-
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
-
-Follow these guidelines for committing:
-
-* Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
-
-* Don't commit half done work, for the sake of your collaborators (and your future self!)
-
-* Test your application before you commit to ensure functionality at every step in the development process
-
-We would like you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL to the deployed application
-
-* The URL to the Github repository
+## Questions
+Inquiries? Send them to: Jacobmayday@gmail.com ![Github](https://avatars1.githubusercontent.com/u/12930451?v=4&s=32)

@@ -8,8 +8,6 @@ const API = {
     }
 
     const json = await res.json();
-    console.log(json);
-    
     if (json.length > 0)
     {
       const last = json[json.length - 1];
@@ -24,11 +22,6 @@ const API = {
 
   async addExercise(data) {
     let id = location.search.split('=')[1];
-
-    if (id === 'undefined')
-    {
-      id = await this.getLastWorkout()._id;
-    }
 
     const res = await fetch('/api/workouts/' + id, {
       method: 'PUT',
